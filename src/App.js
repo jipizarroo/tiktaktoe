@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
-import PlayerSelection from './components/playerselection';
+import TTCboard from './components/tictactoeboard';
+//import PlayerSelection from './components/playerselection';
 
 class App extends React.Component {
   render() {
@@ -10,9 +11,8 @@ class App extends React.Component {
           <div className="row">
             <div className="col">
               <h1>HOLA MUNDO</h1>
-              <h2>HOLA MUNDO</h2>
-              <PlayerSelection />
             </div>
+              <TTCboard />
           </div>
         </div>
       </>
