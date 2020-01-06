@@ -1,8 +1,7 @@
 import React from 'react';
 
 
-class PlayerSelection extends React.Component {
-    render() {
+function PlayerSelection(props){
         return (
             <>
                 <div className="container">
@@ -17,11 +16,11 @@ class PlayerSelection extends React.Component {
                     <div className="row">
                         <div className="col">
                             <h3>HOLA MUNDO</h3>
-                            <input type="text" id="playerinputbox" placeholder="Player1 username"></input>
-                            <input type="text" id="playerinputbox" placeholder="Player 2 username"></input>
+                            <input type="text" id="player1" placeholder="Player1 username" onChange={(e)=>props.input(e)}></input>
+                            <input type="text" id="player2" placeholder="Player 2 username"onChange={(e)=>props.input(e)}></input>
                             <div className="col">
-                                <a href="http://" className="text-center display-1 font-weight-bold text-decoration-none">X</a>
-                                <a href="http://" className="text-center display-1 font-weight-bold text-decoration-none">O</a>
+                                <a href="/" className="text-center display-1 font-weight-bold text-decoration-none" onClick={(e)=>props.btnBoard(e)}>X</a>
+                                <a href="/" className="text-center display-1 font-weight-bold text-decoration-none" onClick={(e)=>props.btnBoard(e)}>O</a>
                             </div>
                         </div>
                     </div>
@@ -30,6 +29,5 @@ class PlayerSelection extends React.Component {
         );
     }
 
-}
 
 export default PlayerSelection;
